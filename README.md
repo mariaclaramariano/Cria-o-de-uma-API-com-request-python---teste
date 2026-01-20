@@ -19,7 +19,7 @@ Um diferencial do projeto é a camada de inteligência de dados, que permite fil
 ## 🛠️ Tecnologias Utilizadas
 
 * **Linguagem:** Python 3.14
-* **API:** [Dados Abertos da Câmara dos Deputados]((https://dadosabertos.camara.leg.br/swagger/api.html
+* **API:** [Dados Abertos da Câmara dos Deputados](https://dadosabertos.camara.leg.br/swagger/api.html
 ))
 * **Banco de Dados:** SQLite3 (Persistência local)
 * **Framework Web:** Flask (Exibição dos dados)
