@@ -42,7 +42,7 @@ Um diferencial do projeto é a camada de inteligência de dados, que permite fil
 ### 1. Preparar o ambiente
 Clone o repositório e crie um ambiente virtual:
 ```bash
-git clone [https://github.com/SEU_USUARIO/projeto-estagio-vobys.git](https://github.com/SEU_USUARIO/projeto-estagio-vobys.git)
+git clone [https://github.com/SEU_USUARIO/projeto-estagio-vobys.git](https://github.com/mariaclaramariano/projeto-estagio-vobys.git)
 cd projeto-estagio-vobys
 python -m venv venv
 .\venv\Scripts\activate  # Windows
