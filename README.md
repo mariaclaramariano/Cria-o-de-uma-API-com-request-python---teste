@@ -8,7 +8,7 @@ Este projeto foi desenvolvido como parte de um desafio técnico para uma vaga de
 
 ### Interface Web (Flask)
 A aplicação consome os dados e gera uma tabela dinâmica para visualização rápida.
-![Flask Web App](print-flask)
+![Flask Web App](print-flask.png)
 
 ### Dashboard Analítico (Power BI)
 Um diferencial do projeto é a camada de inteligência de dados, que permite filtrar e analisar a distribuição dos deputados por partido e estado.
