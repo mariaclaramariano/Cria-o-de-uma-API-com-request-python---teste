@@ -16,7 +16,6 @@ def atualizar_banco():
         cursor = conexao.cursor()
         cursor.execute('CREATE TABLE IF NOT EXISTS deputados (id INTEGER, nome TEXT, partido TEXT, uf TEXT)')
         
-        # Limpa o banco para não duplicar dados
         cursor.execute('DELETE FROM deputados')
         
         for d in dados:
@@ -32,7 +31,6 @@ def atualizar_banco():
 @app.route('/')
 def index():
     atualizar_banco()
-     # Atualiza os dados toda vez que abre o site
     
     conexao = sqlite3.connect('camara_dados.db')
     cursor = conexao.cursor()
@@ -45,7 +43,6 @@ def index():
     lista = cursor.fetchall()
     conexao.close()
 
-    # Template HTML melhorado com Bootstrap
     html = '''
     <!DOCTYPE html>
     <html lang="pt-br">
@@ -112,4 +109,5 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
