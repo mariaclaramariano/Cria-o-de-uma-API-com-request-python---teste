@@ -8,7 +8,7 @@ def buscar_deputados():
     url = "https://dadosabertos.camara.leg.br/api/v2/deputados"
 
     params = {
-        'siglaUf': 'PI', 
+        'siglaUf': 'RJ', 
         'ordem': 'ASC', 
         'ordenarPor': 'nome'}
 
