@@ -7,7 +7,10 @@ def buscar_deputados():
 
     url = "https://dadosabertos.camara.leg.br/api/v2/deputados"
 
-    params = {'ordem': 'ASC', 'ordenarPor': 'siglaPartido'}
+    params = {
+        'siglaUf': 'PI', 
+        'ordem': 'ASC', 
+        'ordenarPor': 'nome'}
 
     headers = {'Accept': 'application/json'}
 
@@ -38,7 +41,6 @@ def salvar_no_banco(lista_deputados):
         )
     ''')
 
-    # ADICIONE ESTA LINHA AQUI:
     cursor.execute('DELETE FROM deputados') 
 
     ## 3) Inserindo os dados da API
@@ -52,7 +54,7 @@ def salvar_no_banco(lista_deputados):
     conectar.close()
     print("Dados salvos no SQLite!!")
 
-# EM EXECUÇÃO
+## 4) EM EXECUÇÃO
 if __name__ == "__main__":
     print("Rodando o request")
     dados = buscar_deputados()
@@ -64,12 +66,12 @@ if __name__ == "__main__":
 
         cursor = conectar.cursor()
 
-        cursor.execute('SELECT nome, partido FROM deputados LIMIT 5')
+        cursor.execute('SELECT nome, partido, uf FROM deputados LIMIT 5')
 
         print("\nExibindo do 1º até o 5º deputado do banco:")
 
         for linha in cursor.fetchall():
 
-            print(f"Deputado --> {linha[0]} | Partido --> {linha[1]}")
+            print(f"Deputado --> {linha[0]} | Partido --> {linha[1]} | UF --> {linha[2]}")
 
         conectar.close()
